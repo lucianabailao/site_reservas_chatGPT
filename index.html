@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.12/dist/jquery.inputmask.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Sistema de Reserva de Hotéis</title>
+</head>
+<body>
+    
+    <!-- Carrossel de Imagens -->
+    <div id="imageCarousel" class="carousel slide active" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./imagens/hotel-1749602_1280.jpg" class="d-block w-100" alt="quarto">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagens/bali-2975787_1280.jpg" class="d-block w-100" alt="paisagem">
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    <div class="container">
+        <h1>Sistema de Reserva de Hotéis</h1>
+        <form id="reservationForm">
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required> 
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" class="form-control" data-inputmask="'mask': '(99) 9999-99999'" placeholder="(00) 0000-00000" maxlength="11" required>
+            
+            <label for="checkIn">Check-in:</label>
+            <input type="date" id="checkIn" onchange="calculateStayDuration()" required>
+        
+            <label for="checkOut">Check-out:</label>
+            <input type="date" id="checkOut" onchange="calculateStayDuration()" required>
+        
+
+            <label for="guests">Número de Hóspedes:</label>
+            <input type="number" id="guests" min="1" required>
+
+            <label for="roomType">Tipo de Quarto:</label>
+            <select id="roomType" required>
+                <option value="triplo">Triplo</option>
+                <option value="duplo">Duplo</option>
+                <option value="standart">Standart</option>
+            </select>
+
+            <label for="stayDuration">Quantidade de Diárias:</label>
+            <input type="text" id="stayDuration" readonly>
+            <button type="button" onclick="checkAvailability()">Verificar Disponibilidade</button>
+        </form>
+
+        <div id="availabilityResult"></div>
+    </div>
+    <div id="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" target="_blank" title="Chat no WhatsApp">
+            <img src="./imagens/WhatsApp_icon.png" alt="WhatsApp">
+        </a>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        // Ativar o carrossel automático
+        $('.carousel').carousel({
+            interval: 3000 // Trocar a cada 3 segundos (ajuste conforme necessário)
+        });
+    </script>
+    
+</body>
+</html>
