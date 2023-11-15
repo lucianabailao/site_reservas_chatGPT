@@ -14,3 +14,4 @@ Além de me responder com o código, foi criado também validação dos campos. 
 - Acrescente no formulário, tipos de quarto, com opção triplo, duplo,standart
 - Acrescente no código opção de chat whatsapp lado direito da página
 - Acrescente no formulário a quantidade de diárias de acordo com a data selecionada
+![Site reservas]([URL_da_Imagem](https://site-reservas-chat-2s00jpwx0-lucianabailao.vercel.app/)https://site-reservas-chat-2s00jpwx0-lucianabailao.vercel.app/)
