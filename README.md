@@ -3,6 +3,7 @@
 **Criei este projeto para testar as habilidades do ChatGPT na criação de códigos.** 
 Pedi para criar um sistema de reservas de hotel com formulário, usando Javascript, Css e Html. 
 Além de me responder com o código, foi criado também validação dos campos. Tudo que solicitei foi criado perfeitamente, acrescentei somente as imagens e poucas alterações.
+Através de outros testes percebi que o chatGPT teve maior êxito com códigos feitos do zero por ele mesmo.
 
 **Eis as frases:**
 - Faça um código com javascript, html e css de um sistema de reserva de hoteis
